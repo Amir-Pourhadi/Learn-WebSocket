@@ -5,13 +5,18 @@ const socket = io.connect("http://localhost:8080");
 const message = document.getElementById("message"),
   handle = document.getElementById("handle"),
   btn = document.getElementById("send"),
-  output = document.getElementById("output");
+  output = document.getElementById("output"),
+  feedback = document.getElementById("feedback");
 
 // Emit events
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   socket.emit("chat", { message: message.value, handle: handle.value });
   message.value = "";
+});
+
+message.addEventListener("keypress", () => {
+  socket.emit("typing", handle.value);
 });
 
 // Listen for events
