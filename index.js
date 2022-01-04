@@ -1,5 +1,5 @@
 const express = require("express");
-const socket = require("socket.io");
+const socketIO = require("socket.io");
 const app = express();
 
 // Define the port to run on
@@ -12,7 +12,7 @@ const server = app.listen(port, () => console.log(`Listening on http://localhost
 app.use(express.static("public"));
 
 // Socket setup
-const io = socket(server);
+const io = socketIO(server);
 
 io.on("connection", (socket) => {
   console.log("made socket connection");
