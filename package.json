@@ -1,0 +1,13 @@
+{
+  "name": "learn-websocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Amir Pourhadi <AmirPourhadi@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
