@@ -8,8 +8,10 @@ const message = document.getElementById("message"),
   output = document.getElementById("output");
 
 // Emit events
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
   socket.emit("chat", { message: message.value, handle: handle.value });
+  message.value = "";
 });
 
 // Listen for events
