@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Hello, World!</h2>
+    <div id="mario-chat">
+      <div id="chat-window">
+        <div id="output"></div>
+      </div>
+      <form></form>
+      <input type="text" id="handle" placeholder="Handle" />
+      <input type="text" id="message" placeholder="Message" />
+      <input type="submit" id="submit" value="Send" />
+    </div>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
